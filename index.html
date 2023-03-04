@@ -42,11 +42,13 @@
     padding: 100px;
 }
 
-/* img {
-    height: 500px;
-    width: auto;
-} */
+@media (max-width:990px) {
 
+
+    .white-section {
+        margin: 5px 5px 5px 5px;
+    }
+}
 
 
     </style>
@@ -56,14 +58,14 @@
   
 
     <section class="white-section text-center" id="pricing" > 
-        <img src="./images/gif2.webp" alt="gif image">
+        <img class="bbb" src="./images/gif2.webp" alt="gif image">
         <div class="pem" >
 
         <h2 class="first" style="color: aliceblue;">Brooklyn love percentage calculator</h2>
           <h4  style="color: aliceblue;"></h4>
           
         
-          <div class="">
+          <div class="aaa">
             <div class="pricing-plan col-lg-12 col-md-12 cl-sm-12">
               <div class="card">
                 <div class="card-header">
@@ -79,6 +81,8 @@
                   </div> 
                  
                   <h2 id="res"> </h2>
+
+                  <h2 id="resee"> </h2>
                   
                 </div>
                 
@@ -116,21 +120,23 @@
             n = Math.floor(n);
            
             document.getElementById("res").innerHTML = ("The percentage of love between " + maleName + " and " + femaleName + " is " + n + "%" );
-        }
+
+            if (n > 70 ) {
+                document.getElementById("resee").innerHTML = ("Your love is superb, you two are going to have a beautiful love life.💖");
+             }  if ( n > 40 && n <= 70 ) {
+                    document.getElementById("resee").innerHTML = ("you can build on what you have😍");
+                }
+                if (n <= 40)  {
+                    document.getElementById("resee").innerHTML = ("Only God can help two of you🤣, you need to pray very well🙏");
+                }
+           }
+        
         
       
     </script>
     
     
     
-    <!-- <script>
     
-        var male   = prompt("what is your name?");
-        var female = prompt("what is your name?");
-        var n =Math.random();
-        n = n * 100;
-        n = Math.floor(n);
-        alert("The percentage of love between " + male + " and " + female + " is " + n + "%" );
-        </script> -->
 </body>
 </html>
